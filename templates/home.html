@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+{% block title %}Aim professors Chamber{% endblock title %}
+{% block content %}
+
+<!-- slider  -->
+<div class="relative">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      {% for slide_image in images %}
+      <div class="swiper-slide flex justify-center items-center text-center bg-white bg-cover bg-center w-full"><img
+        class="block w-full h-[300px] md:h-[500px] lg:h-[600px] object-cover object-center" src="{{ slide_image.slider_image }}"
+        alt="Aim"></div>
+      {% endfor %}
+
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    <div class="autoplay-progress">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="flex md:absolute md:top-1/4 md:left-20 xl:left-32 px-5 md:px-0 -mt-32 md:mt-0 z-40" >
+    <div
+      class="py-5 md:py-10 px-5 md:px-10 lg:px-20 text-white backdrop-blur bg-black/60 rounded-3xl floating mx-auto md:w-auto z-40" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+      <div class="flex flex-col">
+        <h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold">🔥 Rise With Us</h1>
+        <h1 class="text-md md:text-lg lg:text-2xl font-base py-1 md:py-5">Your Bright Future is <span
+            class="text-yellow-400">Our Mission</span></h1>
+        <h1 class="text-md md:text-lg lg:text-2xl font-base py-1 md:pb-5">A community of Best & <span
+            class="text-yellow-400">Inspired Learners</span></h1>
+        <a href="#"
+          class="bg-orange-500 text-white font-light py-2 rounded-md text-md md:text-lg hover:bg-black transition-all duration-500 text-center items-center">Join
+          Our Program</a>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+<!-- welcome  -->
+
+<div class="w-full mx-auto px-10 xl:px-20 py-5 md:py-10 ">
+  <div class="flex flex-col md:flex-row justify-center md:space-x-24 w-full mx-auto items-center">
+    <div class="w-full md:w-2/3 lg:w-auto">
+      <h1 class="text-md md:text-lg font-light text-gray-600 dark:text-gray-400 pb-2">Welcome There!</h1>
+      <h1 class="text-xl lg:text-4xl xl:text-5xl font-semibold text-sky-900 dark:text-gray-100 pb-2">Welcome to Aim</h1>
+      <p class="text-black dark:text-white py-2">There are many variations of passages of Lorem Ipsum available</p>
+      <div class="flex items-center space-x-3 mt-3">
+        <div
+          class="bg-primary-400 dark:bg-primary-300 dark:text-black text-white md:px-6 text-lg md:text-xl py-1 md:py-3 w-12 md:w-16 text-center items-center">
+          1</div>
+        <h1 class="font-bangla text-md md:text-lg lg:text-xl text-primary-400 dark:text-primary-300">২০ বছর ধরে সাফল্যের
+          অগ্রযাত্রা</h1>
+      </div>
+      <div class="flex items-center space-x-3 mt-3">
+        <div
+          class="bg-primary-400 dark:bg-primary-300 dark:text-black text-white md:px-6 text-lg md:text-xl py-1 md:py-3 w-12 md:w-16 text-center items-center">
+          2</div>
+        <h1 class="font-bangla text-md md:text-lg lg:text-xl text-primary-400 dark:text-primary-300">প্রতিটি বিষয়ের জন্য
+          আলাদা শিক্ষক</h1>
+      </div>
+      <div class="flex items-center space-x-3 mt-3 mb-6">
+        <div
+          class="bg-primary-400 dark:bg-primary-300 dark:text-black text-white md:px-6 text-lg md:text-xl py-1 md:py-3 w-12 md:w-16 text-center items-center">
+          3</div>
+        <h1 class="font-bangla text-md md:text-lg lg:text-xl text-primary-400 dark:text-primary-300">এডমিশন ও একাডেমিক
+          আলাদা ব্যাচ</h1>
+      </div>
+
+      <a href="{% url 'notices' %}" class="bg-orange-500 text-white hover:bg-gray-900 transition-all duration-300 px-4 py-2 rounded-full text-md md:text-lg font-semibold"> See All Notices</a>
+    </div>
+    <img src="/static/images/welcomebg.png" alt="Welcome to Aim" class="hidden md:block md:w-1/2 lg:w-1/3 floating" data-aos="fade-up" data-aos-duration="1000">
+
+
+  </div>
+</div>
+
+<!-- category  -->
+<div class="bg-[#F4F4F4] dark:bg-gray-700 py-5 md:py-10">
+  <div class="container mx-auto">
+    <h1 class="text-center text-sky-900 dark:text-white text-xl md:text-2xl xl:text-4xl font-semibold">Course Categories
+    </h1>
+    <h2 class="text-center text-sky-900 dark:text-white text-sm md:text-md font-light pt-2">All Our Available Categories
+      Listed Below</h2>
+  </div>
+  <!-- Swiper -->
+  <div class="p-5 md:py-10 md:px-20 w-full lg:w-3/4 mx-auto" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+    <div class="swiper mySwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide w-[300px] xl:w-[350px] h-[300px] xl:h-[350px] bg-cover bg-center">
+          <img class="block w-full" src="https://swiperjs.com/demos/images/nature-1.jpg" />
+        </div>
+        <div class="swiper-slide w-[300px] xl:w-[350px] h-[300px] xl:h-[350px] bg-cover bg-center">
+          <img class="block w-full" src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </div>
+        <div class="swiper-slide w-[300px] xl:w-[350px] h-[300px] xl:h-[350px] bg-cover bg-center">
+          <img class="block w-full" src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </div>
+        <div class="swiper-slide w-[300px] xl:w-[350px] h-[300px] xl:h-[350px] bg-cover bg-center">
+          <img class="block w-full" src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </div>
+        <div class="swiper-slide w-[300px] xl:w-[350px] h-[300px] xl:h-[350px] bg-cover bg-center">
+          <img class="block w-full" src="https://swiperjs.com/demos/images/nature-5.jpg" />
+        </div>
+        <div class="swiper-slide w-[300px] xl:w-[350px] h-[300px] xl:h-[350px] bg-cover bg-center">
+          <img class="block w-full" src="https://swiperjs.com/demos/images/nature-6.jpg" />
+        </div>
+        <div class="swiper-slide w-[300px] xl:w-[350px] h-[300px] xl:h-[350px] bg-cover bg-center">
+          <img class="block w-full" src="https://swiperjs.com/demos/images/nature-7.jpg" />
+        </div>
+        <div class="swiper-slide w-[300px] xl:w-[350px] h-[300px] xl:h-[350px] bg-cover bg-center">
+          <img class="block w-full" src="https://swiperjs.com/demos/images/nature-8.jpg" />
+        </div>
+        <div class="swiper-slide w-[300px] xl:w-[350px] h-[300px] xl:h-[350px] bg-cover bg-center">
+          <img class="block w-full" src="https://swiperjs.com/demos/images/nature-9.jpg" />
+        </div>
+      </div>
+      <div class="swiper-pagination2"></div>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+<!-- faculty  -->
+<div class="bg-course_bg bg-no-repeat bg-center bg-cover bg-fixed p-5 md:p-10  lg:px-20">
+  <div class="w-full mx-auto items-center text-center">
+    <h1 class="text-white text-xl md:text-2xl xl:text-4xl font-semibold">Our Faculty Members</h1>
+    <h2 class="text-center text-white text-sm md:text-md font-light pt-2">All Our Respected Faculty Members</h2>
+  </div>
+
+  <!-- faculty slides -->
+  <div class="w-full mx-auto" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="800">
+    <div class="swiper mySwiper3">
+      <div class="swiper-wrapper ">
+
+        {% for faculty_info in faculty %}
+        <div class="swiper-slide ">
+          <div class="faculty_hover relative overflow-hidden" href="#">
+            <div class="show hover:scale-110 transition-all duration-500 cursor-pointer">
+              <img src="{{ faculty_info.teacher_image }}" alt="Image"
+                class="hover:scale-110 transition-all duration-500 object-center object-cover">
+            </div>
+            <div class="hide py-2 px-4">
+              <p class="text-xl font-bold">{{ faculty_info.tecaher_name }}</p>
+              <p class="text-sm font-base">{{ faculty_info.tecaher_rank }}</p>
+              <hr class="mt-3">
+              <p class="text-yellow-400">{{ faculty_info.studied_subject }} | {{ faculty_info.institute }}</p>
+              <p class="text-yellow-400">{{ faculty_info.description }}</p>
+            </div>
+          </div>
+        </div>
+{% endfor %}
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</div>
+
+<!-- aim gallary Floting images-->
+<div class="w-full mx-auto px-10 xl:px-20 py-5 md:py-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-pink-100 via-violet-50 to-[#F8F8FF] dark:bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] dark:from-cyan-900 dark:via-primary-600 dark:to-indigo-900">
+
+{% for float_1 in float_1 %}
+  <div class="p-2 md:p-10 flex flex-col md:flex-row items-center md:justify-between mx-auto w-full md:w-[90%] lg:w-[85%] md:space-x-3 lg:space-x-8">
+    <div class="w-full md:w-1/2 lg:w-2/5">
+      <h1 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold pb-2 md:pb-5  text-sky-900 dark:text-primary-300">{{float_1.title}}</h1>
+      <p class="text-md xl:text-lg font-base text-gray-800 dark:text-gray-300 text-justify pb-3">{{float_1.description}}</p>
+    </div>
+    <div class="w-full md:w-3/5 mx-auto" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="800">
+      <img src="{{float_1.image}}" alt="About Aim" class="rounded-2xl w-full shadow-md floating-4">
+    </div>
+  </div>
+{% endfor %}
+
+{% for float_2 in float_2 %}
+  <div class="p-2 md:p-10 flex flex-col md:flex-row items-center md:justify-between mx-auto w-full md:w-[90%] lg:w-[85%] mt-5 md:-mt-10 lg:-mt-24 xl:-mt-32">
+    <div class="w-full md:w-1/2 lg:w-2/5 order-first md:order-last md:ml-3 lg:ml-8">
+      <h1 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold pb-2 md:pb-5  text-sky-900 dark:text-primary-300">{{float_2.title}}</h1>
+      <p class="text-md xl:text-lg font-base text-gray-800 dark:text-gray-300 text-justify pb-3 lg:pb-8">{{float_2.description}}</p>
+      <a href="{% url 'contact' %}" class="bg-orange-500 text-white hover:bg-gray-900 transition-all duration-300 px-4 py-2 rounded-full text-md md:text-lg font-semibold">Explore More</a>
+    </div>
+    <div class="w-full md:w-3/5 mx-auto mt-5 md:mt-0" data-aos="zoom-in-right" data-aos-anchor-placement="center-bottom" data-aos-duration="800">
+      <img src="{{float_2.image}}" alt="About Aim" class="rounded-2xl w-full shadow-xl floating">
+    </div>
+  </div>
+  {% endfor %}
+
+  <h1 class="font-bangla text-sky-900 dark:text-gray-100 font-bold text-xl md:text-2xl xl:text-4xl text-center mt-5 md:mt-10">কেন
+    আমরাই শিক্ষার্থী ও
+    <br> অভিভাবকগণের প্রথম পছন্দ?
+  </h1>
+
+  <!-- testomonial  -->
+  <div class="flex flex-col justify-center md:space-x-24 w-full mx-auto items-center">
+    <!-- testomonials -->
+    <div class="w-full mx-auto md:w-4/5">
+      <div class="swiper mySwiper4 w-full mx-auto">
+        <div class="swiper-wrapper relative py-10">
+{% for testomonial in testomonial %}
+          <div class="swiper-slide relative">
+            <div class="bg-white dark:bg-gray-800 dark:border-gray-700 rounded-xl  border px-5 py-10 relative h-[20rem] 2xl:h-64 relative">
+              <img src="/static/images/quote.png" alt="Testominals Aim"
+                class="absolute -top-5 left-5 shadow-md rounded-full floating-4 w-10 z-50">
+              <p class="font-bangla text-justify text-gray-900 dark:text-white">
+                {{ testomonial.description }}
+              </p>
+              <div class="absolute bottom-0 md:bottom-5">
+                <h1 class="text-md font-semibold text-gray-800 dark:text-gray-100 mt-4">{{ testomonial.name }}</h1>
+                <h1 class="text-sm font-light text-gray-600 dark:text-gray-400">{{ testomonial.identity }}</h1>
+             </div>
+            </div>
+          </div>
+{% endfor  %}
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-5 md:p-10  lg:px-20 bg-primary-600 dark:bg-gray-900 flex flex-col md:flex-row justify-center md:space-x-3 lg:space-x-5 xl:space-x-16 space-y-8 md:space-y-0 items-center mx-auto">
+<img src="/static/images/sister_concern_1.png" alt="Aim sister Concern" class="w-52">
+<img src="/static/images/sister_concern_1.png" alt="Aim sister Concern" class="w-52">
+<img src="/static/images/sister_concern_1.png" alt="Aim sister Concern" class="w-52">
+<img src="/static/images/sister_concern_1.png" alt="Aim sister Concern" class="w-52">
+</div>
+
+
+
+{% endblock content %}

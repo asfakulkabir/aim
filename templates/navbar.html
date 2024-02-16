@@ -1,0 +1,65 @@
+
+<div class=" sticky top-0 z-50">
+  <nav class="bg-gray-900">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Aim</span>
+        </a>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+            <a href="tel:5541251234" class="text-sm text-white">(555) 412-1234</a>
+            
+            <button id="theme-toggle" class="items-center flex flex-row text-gray-900">
+                <div class="flex flex-col justify-center">
+                  <input type="checkbox" name="light-switch" class="light-switch sr-only" />
+                  <label class="relative cursor-pointer p-2">
+                    <svg id="theme-toggle-dark-icon" class="hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <path class="fill-slate-100"
+                        d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" />
+                      <path class="fill-slate-200"
+                        d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z" />
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <path class="fill-gray-100"
+                        d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
+                      <path class="fill-slate-200" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
+                    </svg>
+                    <span class="sr-only">Switch to light / dark version</span>
+                  </label>
+                </div>
+              </button>
+
+        </div>
+    </div>
+</nav>
+<nav class="bg-primary-600">
+    <div class="max-w-screen-xl md:px-4 mx-auto">
+        <div class="flex items-center md:justify-between text-center">
+            <ul class="flex flex-row font-medium mt-0 text-sm md:text-md mx-auto md:mx-0">
+                <a href="/" class="text-white hover:bg-orange-500 transition-all duration-300 py-3 md:py-5  px-4 md:px-5">
+                    Home
+                </a>
+                <a href="{% url 'notices' %}" class="text-white hover:bg-orange-500 transition-all duration-300 py-3 md:py-5  px-4 md:px-5 hidden md:block">
+                    Notices
+                </a>
+                <a href="/" class="text-white hover:bg-orange-500 transition-all duration-300 py-3 md:py-5  px-4 md:px-5 hidden md:block">
+                    Gallery
+                </a>
+                <a href="{% url 'members' %}" class="text-white hover:bg-orange-500 transition-all duration-300 py-3 md:py-5  px-4 md:px-5">
+                    Members
+                </a>
+                <a href="{% url 'about' %}" class="text-white hover:bg-orange-500 transition-all duration-300 py-3 md:py-5  px-4 md:px-5">
+                    About
+                </a>
+                <a href="{% url 'contact' %}" class="text-white hover:bg-orange-500 transition-all duration-300 py-3 md:py-5  px-4 md:px-5 md:hidden">
+                    contact
+                </a>
+            </ul>
+            <a href="{% url 'contact' %}" class="bg-[#7eb34f] hidden md:block text-white py-1 px-4 rounded-full hover:bg-orange-400  transition-all duration-300">
+              Contact Us
+            </a>
+        </div>
+    </div>
+</nav>
+</div>
+

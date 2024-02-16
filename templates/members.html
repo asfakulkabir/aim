@@ -1,0 +1,47 @@
+
+  {% extends "base.html" %}
+{% block title %}Faculty Members{% endblock title %}
+{% block content %}
+
+
+<div class="bg-course_bg bg-no-repeat bg-center bg-cover bg-fixed p-5 md:p-10  lg:px-20">
+    <div class="w-full mx-auto items-center text-center">
+      <h1 class="text-white text-xl md:text-2xl xl:text-4xl font-semibold">Our Faculty Members</h1>
+      <h2 class="text-center text-white text-sm md:text-md font-light pt-2">All Our Respected Faculty Members</h2>
+    </div>
+  
+    <!-- faculty slides -->
+    <div class="w-full mx-auto" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="800">
+      <div class="swiper mySwiper3">
+        <div class="swiper-wrapper ">
+  
+          {% for faculty_info in faculty %}
+          <div class="swiper-slide ">
+            <div class="faculty_hover relative overflow-hidden" href="#">
+              <div class="show hover:scale-110 transition-all duration-500 cursor-pointer">
+                <img src="/{{ faculty_info.teacher_image }}" alt="Image"
+                  class="hover:scale-110 transition-all duration-500 object-center object-cover">
+              </div>
+              <div class="hide py-2 px-4">
+                <p class="text-xl font-bold">{{ faculty_info.tecaher_name }}</p>
+                <p class="text-sm font-base">{{ faculty_info.tecaher_rank }}</p>
+                <hr class="mt-3">
+                <p class="text-yellow-400">{{ faculty_info.studied_subject }} | {{ faculty_info.institute }}</p>
+                <p class="text-yellow-400">{{ faculty_info.description }}</p>
+              </div>
+            </div>
+          </div>
+  {% endfor %}
+  
+        </div>
+  
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+
+
+ 
+ {% endblock content %}
